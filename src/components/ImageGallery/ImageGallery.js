@@ -1,0 +1,20 @@
+import React from 'react';
+import Gallery from 'react-image-gallery';
+import 'react-image-gallery/styles/css/image-gallery.css';
+import './ImageGallery.css';
+
+const ImageGallery = (props) => {
+    const imageList=props?.image?.map((image) =>{
+        return{
+            original:image,
+            thumbnail:image,
+        };
+    });
+    return (
+        <div>
+            <Gallery item={imageList} showBullets showthumbnails={false}/>
+        </div>
+    );
+};
+
+export default ImageGallery;
